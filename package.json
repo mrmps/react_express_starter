@@ -16,7 +16,12 @@
     "nodemon": "^1.14.6"
   },
   "dependencies": {
+    "ajax": "0.0.4",
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
     "concurrently": "^3.5.1",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mysql": "^2.18.1",
+    "sql": "^0.78.0"
   }
 }
