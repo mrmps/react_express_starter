@@ -4,9 +4,8 @@
 
 ## Quick Start
 
-# Replace nodemysql with your mySQL database in server.js
-
 ``` bash
+# Replace nodemysql with your mySQL database in server.js
 # Install dependencies for server
 npm install
 
@@ -27,7 +26,7 @@ npm run client
 
 ## App Info
 
-### Author
+### Credits to
 
 Brad Traversy
 [Traversy Media](http://www.traversymedia.com)
