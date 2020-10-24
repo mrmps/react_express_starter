@@ -1,11 +1,11 @@
 import React from 'react';
 import axios from 'axios';
-import { JsonToTable } from "react-json-to-table";
+import { connect } from 'react-redux';
+import * as actionCreators from '../Actions'
 
-export default class UserQuery extends React.Component {
+class UserQuery extends React.Component {
   state = {
-    name: '',
-    json: '',
+    name: ''
   }
 
   handleChange = event => {
@@ -13,19 +13,16 @@ export default class UserQuery extends React.Component {
   }
 
   handleSubmit = event => {
+    console.log('clicked')
     event.preventDefault();
 
     const user = {
       name: this.state.name
     };
+    console.log('name is', user)
 
-    axios.post(`/api/sql-query-value`, { user })
-      .then(res => {
-        // console.log(res);
-        console.log(res.data);
-        this.setState({ json: JSON.parse(JSON.stringify(res.data))});
-        // console.log(JSON.parse(JSON.stringify(res)))
-      })
+    this.props.postIdea(user)
+    this.props.loadIdeas() 
   }
   
 
@@ -38,12 +35,19 @@ export default class UserQuery extends React.Component {
           </label>
           <button type="submit">Add</button>
         </form>
-        <br></br>
-        <JsonToTable json={this.state.json} />
       </div>
     )
   }
 }
+
+function mapStateToProps(state) {
+  return { 
+    state,
+    name: state.name
+  }
+}
+
+export default connect(mapStateToProps, actionCreators)(UserQuery);
 
 
           

@@ -1,0 +1,48 @@
+
+  .container > div {
+  /*   background: #eee; */
+    padding: 5px;
+    word-wrap: break-word
+  }
+  /* .container > div:nth-child(odd) {
+     background: #ddd;
+  } */
+  .container > div:nth-child(even) {
+      margin-right: 12px;
+  }
+  .container {
+      align-items: center;
+     justify-items: center;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+      white-space: normal;
+      line-height: normal;
+      font-weight: normal;
+      font-size: medium;
+      font-style: normal;
+      text-align: start;
+      border-spacing: 2px;
+      border-color: grey;
+      font-variant: normal;
+      margin: 30px auto 0;
+    max-width: 700px;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+      background: #fff;
+      border-radius: 5px;
+      border-collapse: collapse;
+  }
+  
+  p {
+    font-weight: bold;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    margin-left: 14px;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial;
+    word-break: break-word;
+  }
+  /* .button-container {
+    display: table-caption;
+    justify-content: center;
+  } */

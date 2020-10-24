@@ -7,19 +7,23 @@ import UserQuery from './components/query';
 class App extends Component {
   render() {
     return (
+      // <div>
+      // <title>SQL</title>
+      // <div className="sidenav">
+      //     <Tables/>
+      // </div>
+      // <div className="main">
+      //     <div className="container">
+      //     <UserQuery/>
+      //     <div className="table">
+      //     <table id="table" align="center" border={1} />
+      //     </div>
+      //     </div>
+      // </div>
+      // </div>
       <div>
-      <title>SQL</title>
-      <div className="sidenav">
-          <Tables/>
-      </div>
-      <div className="main">
-          <div className="container">
-          <UserQuery/>
-          <div className="table">
-          <table id="table" align="center" border={1} />
-          </div>
-          </div>
-      </div>
+        <UserQuery />
+        <Tables />
       </div>
   );
   }
